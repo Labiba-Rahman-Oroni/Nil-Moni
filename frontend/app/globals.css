@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ===== NIL MONI design tokens ===== */
+@theme inline {
+  /* Core brand colours (from your brand guide) */
+  --color-royal: #183e69;
+  --color-mustard: #d9a441;
+  --color-cream: #f8e8bf;
+  --color-ivory: #f9f8f3;
+  --color-ink: #253044;
+
+  /* Pastel helpers (softer versions for big backgrounds) */
+  --color-cream-soft: #fcf3dc;
+  /* main page background */
+  --color-cream-pale: #fffaec;
+  /* cards and panels */
+  --color-royal-tint: #e4ebf4;
+  /* very light blue */
+  --color-mustard-tint: #f4e2b3;
+  /* light mustard highlight */
+
+  /* Soft shadow used on cards */
+  --shadow-soft: 0 10px 30px -12px rgba(24, 62, 105, 0.25);
+
+  /* Fonts (variables come from layout.tsx) */
+  --font-heading: var(--font-playfair), var(--font-bengali), serif;
+  --font-body: var(--font-inter), var(--font-bengali), sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-cream-soft text-ink font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading text-ink;
+  }
+
+  ::selection {
+    @apply bg-mustard/40;
+  }
+}
