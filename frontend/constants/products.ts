@@ -6,7 +6,13 @@ export type Product = {
        categorySlug: string;
        price: number; // in BDT
        discountPrice?: number; // only when a real discount exists
-       image?: string; // add real photos later
+       image?: string; // main photo shown on product cards
+       images?: string[]; // all photos for the product page gallery
+       description?: string;
+       sku?: string;
+       materials?: string; // only from real product information
+       size?: string;
+       weight?: string;
        inStock: boolean;
        isNew?: boolean;
        isFeatured?: boolean;
