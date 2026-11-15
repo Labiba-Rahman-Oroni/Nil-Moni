@@ -4,7 +4,7 @@ import "./globals.css";
 import CursorGlow from "@/components/ui/CursorGlow";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Navbar from "@/components/layout/Navbar";
-
+import Footer from "@/components/layout/Footer";
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
@@ -42,6 +42,7 @@ export default function RootLayout({
         <AnnouncementBar />
         <Navbar />
         <div className="flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   );
