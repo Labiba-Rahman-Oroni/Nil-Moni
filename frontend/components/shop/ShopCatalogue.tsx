@@ -35,7 +35,7 @@ export default function ShopCatalogue({
 
        const hasFilters =
               query !== "" ||
-              category !== "all" ||
+              category !== initialCategory ||
               sort !== "default" ||
               minPrice !== "" ||
               maxPrice !== "";
@@ -67,7 +67,7 @@ export default function ShopCatalogue({
 
        function clearFilters() {
               setQuery("");
-              setCategory("all");
+              setCategory(initialCategory);
               setSort("default");
               setMinPrice("");
               setMaxPrice("");
