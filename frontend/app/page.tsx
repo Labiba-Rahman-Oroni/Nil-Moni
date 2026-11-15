@@ -1,8 +1,11 @@
 import BridalBanner from "@/components/home/BridalBanner";
 import CategoriesSection from "@/components/home/CategoriesSection";
 import CollectionPromos from "@/components/home/CollectionPromos";
+import FollowUs from "@/components/home/FollowUs";
 import Hero from "@/components/home/Hero";
+import OurStory from "@/components/home/OurStory";
 import ProductsSection from "@/components/home/ProductsSection";
+import Testimonials from "@/components/home/Testimonials";
 import { sampleProducts } from "@/constants/products";
 
 export default function HomePage() {
@@ -38,6 +41,9 @@ export default function HomePage() {
       />
       <BridalBanner />
       <CollectionPromos />
+      <OurStory />
+      <Testimonials />
+      <FollowUs />
     </main>
   );
 }
