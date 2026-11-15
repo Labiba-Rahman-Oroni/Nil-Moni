@@ -1,5 +1,6 @@
 import BridalBanner from "@/components/home/BridalBanner";
 import CategoriesSection from "@/components/home/CategoriesSection";
+import CollectionPromos from "@/components/home/CollectionPromos";
 import Hero from "@/components/home/Hero";
 import ProductsSection from "@/components/home/ProductsSection";
 import { sampleProducts } from "@/constants/products";
@@ -36,6 +37,7 @@ export default function HomePage() {
         viewAllHref="/shop"
       />
       <BridalBanner />
+      <CollectionPromos />
     </main>
   );
 }
