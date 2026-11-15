@@ -1,3 +1,4 @@
+import BridalBanner from "@/components/home/BridalBanner";
 import CategoriesSection from "@/components/home/CategoriesSection";
 import Hero from "@/components/home/Hero";
 import ProductsSection from "@/components/home/ProductsSection";
@@ -6,6 +7,7 @@ import { sampleProducts } from "@/constants/products";
 export default function HomePage() {
   const newArrivals = sampleProducts.filter((p) => p.isNew).slice(0, 4);
   const featured = sampleProducts.filter((p) => p.isFeatured).slice(0, 4);
+  const bestSellers = sampleProducts.filter((p) => p.isBestSeller).slice(0, 4);
 
   return (
     <main>
@@ -26,6 +28,14 @@ export default function HomePage() {
         products={featured}
         viewAllHref="/shop"
       />
+      <ProductsSection
+        eyebrow="সবচেয়ে জনপ্রিয়"
+        title="Best Sellers"
+        subtitle="গ্রাহকদের পছন্দের গহনা – customer favourites."
+        products={bestSellers}
+        viewAllHref="/shop"
+      />
+      <BridalBanner />
     </main>
   );
 }
