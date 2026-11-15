@@ -1,0 +1,110 @@
+export type Product = {
+       id: string;
+       slug: string;
+       nameEn: string;
+       nameBn: string;
+       categorySlug: string;
+       price: number; // in BDT
+       discountPrice?: number; // only when a real discount exists
+       image?: string; // add real photos later
+       inStock: boolean;
+       isNew?: boolean;
+       isFeatured?: boolean;
+       isBestSeller?: boolean;
+       isSample?: boolean; // true = placeholder, NOT a real product
+};
+
+// SAMPLE DATA ONLY. Names and prices are placeholders for testing the design.
+// They will be replaced by real products from the database later.
+export const sampleProducts: Product[] = [
+       {
+              id: "s1",
+              slug: "sample-jhumka-earrings",
+              nameEn: "Sample Jhumka Earrings",
+              nameBn: "নমুনা ঝুমকা",
+              categorySlug: "earrings",
+              price: 1200,
+              inStock: true,
+              isNew: true,
+              isSample: true,
+       },
+       {
+              id: "s2",
+              slug: "sample-neck-set",
+              nameEn: "Sample Neck Set",
+              nameBn: "নমুনা নেকলেস সেট",
+              categorySlug: "necklaces",
+              price: 2500,
+              discountPrice: 2100,
+              inStock: true,
+              isNew: true,
+              isSample: true,
+       },
+       {
+              id: "s3",
+              slug: "sample-churi-set",
+              nameEn: "Sample Churi Set",
+              nameBn: "নমুনা চুড়ি সেট",
+              categorySlug: "churi",
+              price: 900,
+              inStock: true,
+              isNew: true,
+              isSample: true,
+       },
+       {
+              id: "s4",
+              slug: "sample-payel",
+              nameEn: "Sample Payel",
+              nameBn: "নমুনা পায়েল",
+              categorySlug: "payel",
+              price: 1100,
+              inStock: true,
+              isNew: true,
+              isSample: true,
+       },
+       {
+              id: "s5",
+              slug: "sample-bridal-set",
+              nameEn: "Sample Bridal Set",
+              nameBn: "নমুনা ব্রাইডাল সেট",
+              categorySlug: "bridal",
+              price: 8500,
+              discountPrice: 7500,
+              inStock: true,
+              isFeatured: true,
+              isSample: true,
+       },
+       {
+              id: "s6",
+              slug: "sample-ring",
+              nameEn: "Sample Ring",
+              nameBn: "নমুনা আংটি",
+              categorySlug: "rings",
+              price: 700,
+              inStock: true,
+              isFeatured: true,
+              isSample: true,
+       },
+       {
+              id: "s7",
+              slug: "sample-bracelet",
+              nameEn: "Sample Bracelet",
+              nameBn: "নমুনা ব্রেসলেট",
+              categorySlug: "bracelets",
+              price: 950,
+              inStock: true,
+              isFeatured: true,
+              isSample: true,
+       },
+       {
+              id: "s8",
+              slug: "sample-kids-set",
+              nameEn: "Sample Kids Set",
+              nameBn: "শিশুদের নমুনা সেট",
+              categorySlug: "children",
+              price: 600,
+              inStock: false, // used to test the "Out of stock" label
+              isFeatured: true,
+              isSample: true,
+       },
+];
